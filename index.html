@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSC 196 W</title>
+    <script>
+function changeWindow(viewSection,removeSection){
+    document.getElementById(removeSection).hidden=!document.getElementById(removeSection).hidden
+    document.getElementById(viewSection).hidden= !document.getElementById(viewSection).hidden
+}
+
+
+    </script>
+    <style>
+        body {
+            background-color: #1a1a1d; 
+            color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        a {
+            color: #2aa198;
+        }
+        a:hover {
+            color: #268bd2;
+        }
+         img {
+            border-radius: 50%; 
+            height: 50%; 
+            width: 10% ; 
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+        }
+        button {
+            background-color: #268bd2;
+            border: none;
+            color: white;
+        }
+        button:hover {
+            background-color: #2aa198;
+        }
+        
+        h1 {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <section id="sec1">
+        
+        <div>
+            <a  alt="my linkedin profile picture" href="https://www.linkedin.com/in/hashem-jaber-75a399223/">
+                <img src="https://www.microsoft.com/en-us/research/uploads/prod/2021/08/1400x788_MEB_no_logo_still-scaled.jpg">    
+            </a> 
+            <h1>My first assignment for csc196 W</h1>
+        </div>
+        <p>I am quite passionate about <strong><a href="https://www.ibm.com/topics/machine-learning">Machine Learning</a></strong> and more specifically in models that are used for <strong>linear regression</strong></p>
+        <h2>Area of Interest</h2>
+        <ul>
+            <li>Deep Neural Networks</li>
+            <li>Decision Trees</li>
+            <li>Ensembles of both models</li>     
+            <li>and more!</li>     
+        </ul>
+
+        <h1>Contact Me</h1>       
+        <form>
+            <input oninput="alert('dont waste your time in typing this is just a demo ')" type="email" placeholder="Your email" >
+            <input oninput="alert('dont waste your time in typing')" onchange="alert('dont waste your time in typing')" type="text" value="I am interested in contacting you for the X position" placeholder="Your message" >
+            <button onclick="alert('this doesnt do anything')">Send message</button>
+        </form>
+    </section>
+    <section>
+        <section hidden id="sec2">
+            <button onclick=" 
+                changeWindow('sec2','sec1')    
+                            "
+                >Go Back</button>
+            <div>
+                <h1>MyMLWorkShop</h1>
+            </div>
+            <img style="height: auto; width:auto; border-radius: 20%;" src="https://user-images.githubusercontent.com/91439032/236110702-abf285a8-b995-4887-9032-57d45456c1ab.gif
+            " alt="An animated preview of the MyMLWorkShop project">
+            <img style="height: auto; width:auto; border-radius: 20%;" src="https://user-images.githubusercontent.com/91439032/236112595-45cbcfe8-f2ae-490b-9cb8-28a40ed3551d.gif
+            " alt="An animated preview of the MyMLWorkShop project">
+            <hr>
+            <body >
+                This is the whole LetsFindIt app front end using react native but without the Listings Edit Screen as I am currently using a third party api with the Authorization key being written in strings to translate the string of the location description into longitude and latitude coordinates forthe leaflet.js map also I still havent added the art credits
+                <body>
+        </section>
+
+        <section hidden id="sec3">
+            <button onclick=" 
+               changeWindow('sec1','sec3')    
+                   "
+                >Go Back</button>
+            <div>
+                <h1 style="font-size: xx-large;" >LetsFindIt</h1>
+            </div>
+            <img style="height: 20%; width:20%; border-radius: 10%;" src="https://user-images.githubusercontent.com/91439032/211655313-4d5f7cba-36d2-4706-8971-d19a9a89b18d.png
+            " alt="An image preview of the LetsFindIt project">
+            <img style="height: 20%; width: 20%;; border-radius: 10%;" src="https://user-images.githubusercontent.com/91439032/211655352-e1080cec-e134-452a-9dec-6e2dff55ad69.png
+            " alt="An image preview of the LetsFindIt project">
+<hr>
+            <body style="">
+    This is the whole LetsFindIt app front end using react native but without the Listings Edit Screen as I am currently using a third party api with the Authorization key being written in strings to translate the string of the location description into longitude and latitude coordinates forthe leaflet.js map also I still havent added the art credits
+    <body>
+
+        </section>
+        <section>
+        <!-- Since your checking the comments out here are the links for the resources, they prviate though so be carefule
+https://user-images.githubusercontent.com/91439032/236112595-45cbcfe8-f2ae-490b-9cb8-28a40ed3551d.gif
+
+            https://user-images.githubusercontent.com/91439032/236110702-abf285a8-b995-4887-9032-57d45456c1ab.gif
+        -->
+        <div>
+           
+            <h1>Some of my Projects</h1>
+            <h1>Click on any of my Projects to find more details</h1>
+        </div>
+      
+        <ul>
+            <li  onclick=" 
+                document.getElementById('sec1').hidden=!document.getElementById('sec1').hidden
+                document.getElementById('sec2').hidden= !document.getElementById('sec2').hidden " >MyMLWorkShop</li>
+            <li onclick="changeWindow('sec3','sec1')    " >LetsFindIt</li>
+            <li>CloudForm</li>     
+            <li>among others !</li>     
+        </ul>
+
+     
+    </section>
+</body>
+</html>
+
