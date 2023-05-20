@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fancify Shamcify</title>
+        
+		<style>
+			fieldset {
+				border: 2px solid #000;
+				padding: 20px;
+				margin-bottom: 20px;
+			}
+		</style>
+		<!-- link to your script file here
+
+		
+		-->
+	</head>
+
+	<body>
+		<h1>Fancify my Text</h1>
+		
+		<fieldset>
+			<legend>Text</legend>
+			<textarea id='target' rows="4" cols="30"></textarea>
+		</fieldset>
+
+		<fieldset>
+			<legend>Fancify</legend>
+			<button id="bigger">Bigger!</button>
+			<hr>
+			
+			<button id="moo">MOO!</button>
+			<div>
+				<input  type="radio" id="fancy" name="style" value="fancy">
+				<label for="fancy">FancyShmancy</label>
+			</div>
+			<div>
+				<input type="radio" id="boring" name="style" value="boring">
+				<label for="boring">BoringBetty</label>
+			</div>
+		</fieldset>
+	</body>
+    <script>
+        try{
+let input=  document.getElementById("input");
+let bigger= document.getElementById('bigger')
+let target= document.getElementById('target');
+let moo= document.getElementById('moo');
+let fancy= document.getElementById('fancy');
+let boring= document.getElementById('boring');
+function makeNumber(string){
+
+    let match = string.match(/(\d+)(\D+)/);
+    let number = match ? match[1] : 0;
+    return parseInt(number, 10);
+}
+moo.onclick=()=>{
+let text=target.textContent+' moo';
+target.textContent=text
+
+
+}
+
+
+bigger.onclick=()=>{
+
+target.style.fontSize=  (makeNumber(target.style.fontSize)+10)+'pt'; 
+
+}
+
+fancy.onchange=()=>{
+	target.style.fontFamily='fantasy';
+	target.style.fontWeight='bold';
+	
+}
+
+boring.onchange=()=>{
+	
+	target.style.fontFamily='';
+	target.style.fontWeight='';
+}
+
+moo.onclick=()=>{
+var str = target.value
+alert(str)
+var parts = str.split(" ");  // ["How", "are", "you?"]
+parts.push('mooo')
+str = parts.join("_"); 
+target.value=str.toUpperCase();
+}
+
+} catch(e){
+alert(e)
+
+}
+    </script>
+</html>
+
